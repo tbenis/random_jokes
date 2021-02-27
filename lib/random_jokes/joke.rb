@@ -8,7 +8,6 @@ class RandomJokes::Joke
     end
 
     def print_joke
-
         puts @joke_setup
         sleep 3
         puts @joke_punchline
