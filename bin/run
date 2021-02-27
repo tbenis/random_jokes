@@ -5,7 +5,6 @@ require_relative '../config/environment'
 my_cli = RandomJokes::CLI.new
 my_api = RandomJokes::API.new
 
-my_cli.welcome_user
-# my_api.parse_json
+my_cli.call
 
 
