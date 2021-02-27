@@ -1,10 +1,11 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env ruby 
 
 require_relative '../config/environment'
 
 my_cli = RandomJokes::CLI.new
+my_api = RandomJokes::API.new
 
-my_cli.call
-
+my_cli.welcome_user
+# my_api.parse_json
 
 

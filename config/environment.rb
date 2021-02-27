@@ -1,4 +1,8 @@
 require "pry"
+require 'open-uri'
+require 'net/http'
+require 'json'
+require 'colorize'
 require_relative "../lib/random_jokes/version"
 require_relative "../lib/random_jokes/api"
 require_relative "../lib/random_jokes/cli"
