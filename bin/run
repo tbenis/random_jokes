@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require_relative '../config/environment'
+
+my_cli = RandomJokes::CLI.new
+
+my_cli.call
+
+
+

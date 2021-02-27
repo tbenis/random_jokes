@@ -1,0 +1,2 @@
+class RandomJokes::Jokes
+end

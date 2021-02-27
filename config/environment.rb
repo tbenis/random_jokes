@@ -1,0 +1,5 @@
+require "pry"
+require_relative "../lib/random_jokes/version"
+require_relative "../lib/random_jokes/api"
+require_relative "../lib/random_jokes/cli"
+require_relative "../lib/random_jokes/joke"
