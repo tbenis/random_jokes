@@ -35,7 +35,7 @@ class RandomJokes::CLI
     end
 
     def error_message
-        puts "Hmm Not sure what you mean by that. Please try again".red
+        puts "Hmm Not sure what you mean by that. Please try again".red 
     end
     
     def line_of_demarcation
