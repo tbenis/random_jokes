@@ -21,7 +21,7 @@ class RandomJokes::API
     end
 
     def self.get_response_body
-        uri = URI.parse(@@url_type)
+        uri = URI.parse(@@url_type) 
         response = Net::HTTP.get_response(uri)
         response.body
     end

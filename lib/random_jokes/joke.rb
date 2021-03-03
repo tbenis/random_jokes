@@ -1,6 +1,7 @@
 class RandomJokes::Joke
 
     def initialize(joke)
+        # puts "#{joke}"
         @get_joke_type = joke["type"]
         @joke_setup = joke["setup"]
         @joke_punchline = joke["punchline"]

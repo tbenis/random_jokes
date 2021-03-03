@@ -28,7 +28,6 @@ class RandomJokes::CLI
 
         if types.include?(type.downcase)
             joke = RandomJokes::API.new(type)
-            # RandomJokes::API.parse_json
             line_of_demarcation
             try_again?
         elsif type == 'exit' || type == 'e'
@@ -51,13 +50,13 @@ class RandomJokes::CLI
         elsif no.include?(y_or_n.downcase)
             exit_app
         else
-            error_message
+            error_message(y_or_n)
             try_again?
         end
 
     end
 
-    def error_message(the_error="")
+    def error_message(the_error="empty")
         messages = ["Hmm Not sure what you mean by <#{the_error}>. Please try again", "Really? LOL", "Oops! Try again", "Oh no. I think you broke it", "We don't have all day.", "OMG! <#{the_error}> is not a valid input. Please try again"]
         puts "Error: #{messages[rand(0..messages.length-1)]}".red 
     end
@@ -83,17 +82,16 @@ class RandomJokes::CLI
 
     def exit_app
         puts "
-        
-        ████████╗██╗  ██╗ █████╗ ███╗   ██╗██╗  ██╗    ██╗   ██╗ ██████╗ ██╗   ██╗██╗
-        ╚══██╔══╝██║  ██║██╔══██╗████╗  ██║██║ ██╔╝    ╚██╗ ██╔╝██╔═══██╗██║   ██║██║
-           ██║   ███████║███████║██╔██╗ ██║█████╔╝      ╚████╔╝ ██║   ██║██║   ██║██║
-           ██║   ██╔══██║██╔══██║██║╚██╗██║██╔═██╗       ╚██╔╝  ██║   ██║██║   ██║╚═╝
-           ██║   ██║  ██║██║  ██║██║ ╚████║██║  ██╗       ██║   ╚██████╔╝╚██████╔╝██╗
-           ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝       ╚═╝    ╚═════╝  ╚═════╝ ╚═╝
-                                                                             
+                    
+                    ████████╗██╗  ██╗ █████╗ ███╗   ██╗██╗  ██╗    ██╗   ██╗ ██████╗ ██╗   ██╗██╗
+                    ╚══██╔══╝██║  ██║██╔══██╗████╗  ██║██║ ██╔╝    ╚██╗ ██╔╝██╔═══██╗██║   ██║██║
+                       ██║   ███████║███████║██╔██╗ ██║█████╔╝      ╚████╔╝ ██║   ██║██║   ██║██║
+                       ██║   ██╔══██║██╔══██║██║╚██╗██║██╔═██╗       ╚██╔╝  ██║   ██║██║   ██║╚═╝
+                       ██║   ██║  ██║██║  ██║██║ ╚████║██║  ██╗       ██║   ╚██████╔╝╚██████╔╝██╗
+                       ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝       ╚═╝    ╚═════╝  ╚═════╝ ╚═╝
+                                                                                            
 
         ".green
-        return
     end
    
 end
